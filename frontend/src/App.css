@@ -1,0 +1,12 @@
+*{
+   
+}
+
+html{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #2D2F39; 
+    /* background-image: linear-gradient(315deg,#161A23,#2D2F39 ); */
+  
+}   
