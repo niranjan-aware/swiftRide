@@ -16,10 +16,9 @@ router.get('/', (req, res) => {
 // //ADDING DRIVER API
 
 router.post('/addDriver', async (req, res) => {
-    const {name} = req.body
-
+    const {name,driver_id,email,phone_number} = req.body
     try {
-        const driver = new Driver({name:req.body.name})
+        const driver = new Driver({name:name,driver_id:driver_id,email:email,phone_number:phone_number,assigned_cab:[]})
         await driver.save()
         // const i = driver._id;
         // console.log(i)

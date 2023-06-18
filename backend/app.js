@@ -29,7 +29,7 @@ app.use(require('./routers/addDriver'))
 // app.use(middleware);
 
 //CAB ROUTERS
-app.use(require('./routers/cabOwner'))
+app.use(require('./routers/cabDetails'))
 
 
 app.listen(port, () => {
