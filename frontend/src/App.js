@@ -1,17 +1,19 @@
 import React from 'react';
 import { Fragment } from 'react';
-// import {BrowserRouter as Router,Routes,Route,NavLink} from "react-router-dom"
-// import LandingPage from './components/LandingPage'
-import Home from './components/Home'
+import LandingPage from './components/LandingPage'
 import './App.css'
+import 'bootstrap/dist/css/bootstrap.css';
+import Home from './components/Home';
+
 
 function App() {
   return (
     <Fragment>
-      {/* <Router>
-      <LandingPage/>
-      </Router> */}
-      <Home></Home>
+    
+    
+     <Home/>   
+       {/* <LandingPage/> */}
+      
     </Fragment>
   );
 }
