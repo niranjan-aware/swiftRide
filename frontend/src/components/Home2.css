@@ -1,0 +1,21 @@
+.tabs {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .tab {
+    padding: 10px 20px;
+    background-color: #eee;
+    cursor: pointer;
+  }
+  
+  .tab.active {
+    background-color: #ccc;
+  }
+  
+  .tab-content {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+  }
+  
