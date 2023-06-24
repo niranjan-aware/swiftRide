@@ -1,3 +1,4 @@
+
 import React from "react";
 import "../css/Home.css";
 import Container from "react-bootstrap/Container";
@@ -81,4 +82,3 @@ const Home = () => {
   );
 };
 
-export default Home;

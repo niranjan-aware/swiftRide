@@ -1,27 +1,3 @@
-import React, { useState } from "react";
-import {
-  Col,
-  Button,
-  Row,
-  Container,
-  Card,
-  Form,
-  Tab,
-  Tabs,
-} from "react-bootstrap";
-import NavigationBar from "../NavigationBar";
-
-export default function RegisterAsDriver() {
-  const [key, setKey] = useState("driver");
-
-  const handleTabChange = (k) => {
-    setKey(k);
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Handle form submission logic here
-  };
 
   return (
     <div>
