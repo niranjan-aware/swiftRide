@@ -1,0 +1,31 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 50vw; /* Adjust the maximum width as needed */
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  }
+  
+  .card-header {
+    margin-bottom: 10px;
+  }
+  
+  .card-title {
+    margin-bottom: 5px;
+    font-size: 1.2rem;
+  }
+  
+  .card-subtitle {
+    font-size: 0.9rem;
+    color: #888888;
+  }
+  
+  .card-body p {
+    margin-bottom: 5px;
+  }
+  

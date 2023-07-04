@@ -1,15 +1,25 @@
-*{
-
-   margin: 0;
-   /* background-color: #2D2F39; */
-   background-color: black;
-}
-
-html{
-    
-    /* background-color: #2D2F39; 
-    background-image: linear-gradient(to top left,#9c9fae 10% ,#161A23 100% ); */
-    /* background-image: radial-gradient(330deg,#2561ef 80% ,#9c9fae 100% ); */
-   
+* {
+    margin: 0;
+    background-color: black;
+  }
   
-}    
+  html {
+    /* Add responsive background styles */
+  }
+  
+  /* Define media queries for different screen sizes */
+  @media (max-width: 768px) {
+    /* Styles for screens smaller than 768px */
+    /* Adjust layout properties, font sizes, etc. */
+  }
+  
+  @media (min-width: 769px) and (max-width: 1024px) {
+    /* Styles for screens between 769px and 1024px */
+    /* Adjust layout properties, font sizes, etc. */
+  }
+  
+  @media (min-width: 1025px) {
+    /* Styles for screens larger than 1025px */
+    /* Adjust layout properties, font sizes, etc. */
+  }
+  

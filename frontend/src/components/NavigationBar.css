@@ -1,0 +1,68 @@
+.navbar {
+  width: 100%;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+}
+
+.logo-image {
+  width: 70px;
+  height: 70px;
+  margin-right: 10px;
+}
+
+.brand-text {
+  font-size: 2rem;
+  font-family: "Azonix", sans-serif;
+  color: yellow;
+  font-style: italic;
+  text-decoration: none;
+  text-decoration-line: none; /* Remove underline */
+}
+
+.navbar-nav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.nav-link {
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  color: yellow;
+  text-decoration: none; /* Remove underline on hover */
+}
+
+.login-link {
+  margin-left: 10px;
+}
+.login-button {
+  borderRadius: 20px;
+  padding: 8px 20px;
+  fontSize: 1rem;
+  margin-left: 10px;
+  background-color: transparent;
+  border: none;
+  color: rgb(255, 252, 95);
+  transition: color 0.3s ease;
+}
+
+.login-button:hover {
+  color: yellow;
+}
+
+.nav-link {
+  font-size: 1rem;
+  text-decoration: none;
+  color: black;
+}
+
+.nav-link:hover {
+  color: yellow;
+}

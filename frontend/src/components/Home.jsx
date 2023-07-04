@@ -1,4 +1,3 @@
-
 import React from "react";
 import "../css/Home.css";
 import Container from "react-bootstrap/Container";
@@ -16,63 +15,46 @@ const Home = () => {
       preserveAspectRatio: "xMidYMid slice",
     },
   };
+
   return (
-    <div style={{ minHeight: "100%" }}>
+    <div className="home-container">
       <NavigationBar />
-      <div
-        className="home-page"
-        style={{ display: "flex", alignItems: "center" }}
-      >
+      <div className="home-page">
         <Container>
           <div className="row justify-content-center">
             <div className="col-md-6 d-flex align-items-center justify-content-center">
               <div className="text-content">
-                <h1
-                  className="animate_animated animate_fadeInLeft"
-                  style={{ marginBottom: "5px" }}
-                >
+                <h1 className="animate_animated animate_fadeInLeft">
                   Welcome to{" "}
-                  <p
-                    style={{
-                      display: "inline",
-                      color: "yellow",
-                      fontFamily: "Azonix",
-                      fontStyle: "italic",
-                    }}
+                  <span
+                    className="highlight"
+                    style={{ fontFamily: "Azonix" }}
                   >
                     SWIFTRIDE
-                  </p>
+                  </span>
                 </h1>
                 <p className="animate_animated animate_fadeInLeft">
                   "Experience the Future of Cab Management with SwiftRide"
                 </p>
                 <br />
-                <Link to="/registerasdriver">
-                  <button className="btn btn-outline-warning ms-2 me-2">
+                <div className="btn-group">
+                  <Link to="/DiverList" className="btn btn-outline-warning">
                     Register as Driver
-                  </button>
-                </Link>
-                <Link to="/registerascarowner">
-                  <button className="btn btn-outline-warning  ms-2 me-2">
+                  </Link>
+                  <Link to="/registerascarowner" className="btn btn-outline-warning">
                     Register as Car Owner
-                  </button>
-                </Link>
-                <Link to="/registerasuser">
-                  <button className="btn btn-outline-warning ms-2 me-2">
+                  </Link>
+                  <Link to="/registerasuser" className="btn btn-outline-warning">
                     Register as User
-                  </button>
-                </Link>
+                  </Link>
+                </div>
               </div>
             </div>
             <div className="col-md-6 d-flex align-items-center justify-content-center">
               <div className="image-content animate_animated animate_fadeInRight">
-                {/* <img
-                  src={car2}
-                  alt="Car"
-                  style={{ width: '100%', height: '50vh',borderRadius:'30px' }}
-                
-                /> */}
-                <Lottie options={defaultOptions} height={700} width={700} />
+                <div className="lottie-container">
+                  <Lottie options={defaultOptions} />
+                </div>
               </div>
             </div>
           </div>

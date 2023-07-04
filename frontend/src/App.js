@@ -6,7 +6,7 @@ import Home from "./components/Home";
 import { BrowserRouter, Route, Routes, Switch } from "react-router-dom";
 import Login from "./components/Auth/Login";
 import RegisterAsCarOwner from "./components/Auth/RegisterAsCarOwner";
-import RegisterAsDriver from "./components/Auth/RegisterAsDriver";
+import DriverList from "./components/DriverList";
 
 function App() {
   return (
@@ -20,8 +20,8 @@ function App() {
             exact
           />
           <Route
-            path="/registerasdriver"
-            element={<RegisterAsDriver />}
+            path="/DiverList"
+            element={<DriverList/>}
             exact
           />
           <Route path="/login" element={<Login />} exact />
