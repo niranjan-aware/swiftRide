@@ -39,10 +39,10 @@ const Home = () => {
                 <br />
                 <div className="btn-group">
                   <Link to="/DiverList" className="btn btn-outline-warning">
-                    Register as Driver
+                  Driver Enrollment
                   </Link>
-                  <Link to="/registerascarowner" className="btn btn-outline-warning">
-                    Register as Car Owner
+                  <Link to="/CabList" className="btn btn-outline-warning">
+                  Cab Enrollment
                   </Link>
                   <Link to="/registerasuser" className="btn btn-outline-warning">
                     Register as User

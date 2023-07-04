@@ -1,0 +1,29 @@
+.cab-list {
+    margin-top: 150px;
+    overflow: auto;
+    height: calc(100vh - 100px);
+  }
+  
+  .list-heading {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .cards-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 800px; /* Adjust the max-width as per your requirement */
+    margin: 0 auto; /* Center the container horizontally */
+  }
+  
+  .card {
+    width: 100%;
+    padding: 20px; /* Adjust the padding as per your preference */
+  }
+  
+  .card:first-child {
+    margin-top: 20px; /* Add margin to the first card */
+  }
+  

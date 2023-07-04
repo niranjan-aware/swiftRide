@@ -7,6 +7,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: transparent;
 }
 
 .list-heading {
@@ -19,18 +20,38 @@
 }
 
 .cards-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  max-width: 800px;
+  margin: 80px auto 0; /* Add top margin of 80px */
+  margin-top: 1200px;
+}
+
+.driver-card {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  max-width: 800px; /* Adjust the max-width as per your requirement */
-  margin: 0 auto; /* Center the container horizontally */
+  justify-content: space-between;
 }
 
-.card {
-  width: 100%;
-  padding: 20px; /* Adjust the padding as per your preference */
+.driver-details {
+  margin-bottom: 10px;
 }
 
-.card:first-child {
-  margin-top: 200px; /* Add margin to the first card */
+.driver-name {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.driver-id {
+  font-size: 14px;
+  color: #666;
+}
+
+.driver-info p {
+  margin-bottom: 5px;
 }
