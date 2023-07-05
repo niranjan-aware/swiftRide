@@ -44,7 +44,7 @@ const Home = () => {
                   <Link to="/CabList" className="btn btn-outline-warning">
                   Cab Enrollment
                   </Link>
-                  <Link to="/registerasuser" className="btn btn-outline-warning">
+                  <Link to="/TabList" className="btn btn-outline-warning">
                     Register as User
                   </Link>
                 </div>

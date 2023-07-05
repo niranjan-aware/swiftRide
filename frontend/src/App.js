@@ -7,6 +7,7 @@ import { BrowserRouter, Route, Routes, Switch } from "react-router-dom";
 import Login from "./components/Auth/Login";
 import CabList from './components/CabList'
 import DriverList from "./components/DriverList";
+import TabList from "./components/TabList"
 
 function App() {
   return (
@@ -22,6 +23,11 @@ function App() {
           <Route
             path="/DiverList"
             element={<DriverList/>}
+            exact
+          />
+          <Route
+            path="/TabList"
+            element={<TabList/>}
             exact
           />
           <Route path="/login" element={<Login />} exact />
