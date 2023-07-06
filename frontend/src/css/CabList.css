@@ -1,12 +1,9 @@
 .cab-list {
-  margin-top: 100px;
+  margin-top: 0;
   overflow-y: auto;
-  height: calc(100vh - 100px);
+  height: auto;
   padding-top: 0;
 }
-
-
-
 
 .list-heading {
   position: fixed;

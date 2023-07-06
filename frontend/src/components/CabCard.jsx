@@ -1,8 +1,8 @@
-import React from 'react';
-import { FaEdit, FaTrash } from 'react-icons/fa';
-import '../css/CabCard.css';
+import React from "react";
+import { FaEdit, FaTrash } from "react-icons/fa";
+import "../css/CabCard.css";
 
-const CabCard = ({ cab_registration_number, cab_model, cab_colour }) => {
+const CabCard = ({ cab_registration_number, cab_model, cab_colour,onDelete }) => {
   console.log(cab_colour);
   return (
     <div className="cab-card">
@@ -15,7 +15,7 @@ const CabCard = ({ cab_registration_number, cab_model, cab_colour }) => {
         <button className="edit-button">
           <FaEdit />
         </button>
-        <button className="delete-button">
+        <button className="delete-button" onClick={onDelete}>
           <FaTrash />
         </button>
       </div>

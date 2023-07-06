@@ -31,4 +31,15 @@ router.post('/addDriver', async (req, res) => {
 })
 
 
+router.get('/DriverDetails', async (req, res) => {
+    try {
+        const posts = await Driver.find()
+        res.status(200).json(posts)
+    } catch (e) {
+        console.log(e)
+        res.status(404).json({message: "something went wrong" })
+    }
+
+})
+
 module.exports = router
