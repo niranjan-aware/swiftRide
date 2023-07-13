@@ -1,181 +1,68 @@
-
 import React, { useState } from "react";
-import {
-  Col,
-  Button,
-  Row,
-  Container,
-  Card,
-  Form,
-  Tab,
-  Tabs,
-} from "react-bootstrap";
+import { Button, Card, Container, Form } from "react-bootstrap";
 import NavigationBar from "../NavigationBar";
+import "./RegisterAsDriver.css";
 
 export default function RegisterAsDriver() {
-  const [key, setKey] = useState("driver");
-
-  const handleTabChange = (k) => {
-    setKey(k);
-  };
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
     // Handle form submission logic here
   };
 
+  const handleClose = () => {
+    // Handle modal close logic here
+  };
+
   return (
-    <div>
+    <div className="register-driver">
       <NavigationBar />
-      <Container>
-        <Row className="vh-95 d-flex justify-content-center align-items-center">
-          <Col md={8} lg={6} xs={12}>
-            <Card className="bg-dark">
-              <Card.Body className="bg-dark">
-                <div className="mb-3 mt-md-4">
-                  <div className="mb-3 text-center">
-                    <h2
-                      className="fw-bold p-2 text-light"
-                      style={{ whiteSpace: "nowrap" }}
-                    >
-                      <p
-                        style={{
-                          display: "inline",
-                          color: "yellow",
-                          fontFamily: "Azonix",
-                          fontStyle: "italic",
-                        }}
-                      >
-                        Login Form
-                      </p>
-                    </h2>
-                    <Tabs
-                      id="login-form-tabs"
-                      activeKey={key}
-                      onSelect={handleTabChange}
-                      className="mb-3"
-                      variant="pills"
-                      justify="center"
-                    >
-                      <Tab eventKey="driver" title="Login as Driver">
-                        <Form className="p-3" onSubmit={handleSubmit}>
-                          <Form.Group
-                            className="mb-3"
-                            controlId="formBasicEmail"
-                          >
-                            <Form.Label className="text-start">
-                              Email address
-                            </Form.Label>
-                            <Form.Control
-                              type="email"
-                              placeholder="Enter email"
-                            />
-                          </Form.Group>
-                          <Form.Group
-                            className="mb-3"
-                            controlId="formBasicPassword"
-                          >
-                            <Form.Label className="text-start">
-                              Password
-                            </Form.Label>
-                            <Form.Control
-                              type="password"
-                              placeholder="Password"
-                            />
-                          </Form.Group>
-                          <Form.Group
-                            className="mb-3"
-                            controlId="formBasicConfirmPassword"
-                          >
-                            <Form.Label className="text-start">
-                              Confirm Password
-                            </Form.Label>
-                            <Form.Control
-                              type="password"
-                              placeholder="Confirm Password"
-                            />
-                          </Form.Group>
-                          <div className="d-grid pt-3 pb-3">
-                            <Button variant="outline-warning " type="submit">
-                              Login as DRIVER
-                            </Button>
-                          </div>
-                        </Form>
-                        <div className="mt-3">
-                          <p className="mb-0 text-center p-3 text-light">
-                            Don't have an account?{" "}
-                            <a
-                              href="./registerasdriver"
-                              className="text-primary fw-bold"
-                            >
-                              Register Now
-                            </a>
-                          </p>
-                        </div>
-                      </Tab>
-                      <Tab eventKey="carOwner" title="Login as Car Owner">
-                        <Form className="p-3" onSubmit={handleSubmit}>
-                          <Form.Group
-                            className="mb-3"
-                            controlId="formBasicEmail"
-                          >
-                            <Form.Label className="text-start">
-                              Email address
-                            </Form.Label>
-                            <Form.Control
-                              type="email"
-                              placeholder="Enter email"
-                            />
-                          </Form.Group>
-                          <Form.Group
-                            className="mb-3"
-                            controlId="formBasicPassword"
-                          >
-                            <Form.Label className="text-start">
-                              Password
-                            </Form.Label>
-                            <Form.Control
-                              type="password"
-                              placeholder="Password"
-                            />
-                          </Form.Group>
-                          <Form.Group
-                            className="mb-3"
-                            controlId="formBasicConfirmPassword"
-                          >
-                            <Form.Label className="text-start">
-                              Confirm Password
-                            </Form.Label>
-                            <Form.Control
-                              type="password"
-                              placeholder="Confirm Password"
-                            />
-                          </Form.Group>
-                          <div className="d-grid pt-3 pb-3">
-                            <Button variant="outline-warning" type="submit">
-                              Login as Car Owner
-                            </Button>
-                          </div>
-                        </Form>
-                        <div className="mt-3">
-                          <p className="mb-0 text-center p-3 text-light">
-                            Don't have an account?{" "}
-                            <a
-                              href="./registerascarowner"
-                              className="text-primary fw-bold"
-                            >
-                              Register Now
-                            </a>
-                          </p>
-                        </div>
-                      </Tab>
-                    </Tabs>
-                  </div>
-                </div>
-              </Card.Body>
-            </Card>
-          </Col>
-        </Row>
+      <div className="register-driver-overlay"></div>
+      <Container className="register-driver-container">
+        <Card className="register-driver-card">
+          <Card.Header className="register-driver-header">
+            <h2 className="register-driver-heading">Login as Driver</h2>
+            <Button
+              variant="link"
+              className="register-driver-close-button"
+              onClick={handleClose}
+            >
+              X
+            </Button>
+          </Card.Header>
+          <Card.Body>
+            <Form className="register-driver-form" onSubmit={handleSubmit}>
+              <Form.Group controlId="formBasicEmail">
+                <Form.Label>Email address</Form.Label>
+                <Form.Control
+                  type="email"
+                  placeholder="Enter email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                />
+              </Form.Group>
+
+              <Form.Group controlId="formBasicPassword">
+                <Form.Label>Password</Form.Label>
+                <Form.Control
+                  type="password"
+                  placeholder="Password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                />
+              </Form.Group>
+
+              <Button variant="primary" type="submit">
+                Login
+              </Button>
+            </Form>
+            <p className="register-driver-signup-link">
+              Don't have an account? <a href="./registerasdriver">Sign up</a>
+            </p>
+          </Card.Body>
+        </Card>
       </Container>
     </div>
   );

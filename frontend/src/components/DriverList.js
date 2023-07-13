@@ -8,6 +8,20 @@ const DriverList = () => {
   const [drivers, setDrivers] = useState([]);
   const [error, setError] = useState(null);
 
+  const handleDelete = (id) => {
+    console.log(id)
+    axios
+      .delete(`http://localhost:5000/DriverDetails/${id}`)
+      .then((response) => {
+        console.log("Driver entry deleted successfully");
+        // Handle any additional logic after deletion if needed
+      })
+      .catch((error) => {
+        console.error("Error deleting Driver entry:", error);
+      });
+  };
+   
+
   useEffect(() => {
     axios
       .get("http://localhost:5000/DriverDetails")
@@ -17,20 +31,8 @@ const DriverList = () => {
       .catch((error) => {
         setError(error.message);
       });
-  }, []);
+  }, [handleDelete]);
 
-  const handleDelete = (idNumber) => {
-    axios
-      .delete(`http://localhost:5000/DriverDetails/${idNumber}`)
-      .then((response) => {
-        // Filter out the deleted driver from the state
-        const updatedDrivers = drivers.filter((driver) => driver.driver_id!== idNumber);
-        setDrivers(updatedDrivers);
-      })
-      .catch((error) => {
-        setError(error.message);
-      });
-  };
 
   if (error) {
     return <div>Error: {error}</div>;
@@ -45,11 +47,12 @@ const DriverList = () => {
           {drivers.map((driver) => (
             <DriverCard
               key={driver._id}
+              id={driver._id}
               name={driver.name}
               idNumber={driver.driver_id}
               email={driver.email}
               phoneNumber={driver.phone_number}
-              onDelete={handleDelete}
+              onDelete={() => handleDelete(driver._id)}
             />
           ))}
         </div>

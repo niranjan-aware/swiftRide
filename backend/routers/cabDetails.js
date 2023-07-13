@@ -65,7 +65,7 @@ router.delete('/CabDetails/:id', async (req, res) => {
 router.put('/CabDetails/:id', async (req, res) => {
   const cabId = req.params.id;
   const { cab_registration_number, cab_model, cab_colour } = req.body;
-  console.log(cabId)
+  // console.log(cabId)
   try {
     // Find and update the cab entry by ID
     const updatedCab = await cabProvider.findByIdAndUpdate(
