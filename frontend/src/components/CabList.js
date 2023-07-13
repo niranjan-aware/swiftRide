@@ -7,6 +7,21 @@ import axios from 'axios';
 const CabList = () => {
   const [cabDetails, setCabDetails] = useState([]);
 
+ 
+
+  const handleDelete = (id) => {
+    console.log(id)
+    axios
+      .delete(`http://localhost:5000/CabDetails/${id}`)
+      .then((response) => {
+        console.log("Cab entry deleted successfully");
+        // Handle any additional logic after deletion if needed
+      })
+      .catch((error) => {
+        console.error("Error deleting cab entry:", error);
+      });
+  };
+   
   useEffect(() => {
     axios
       .get('http://localhost:5000/CabDetails')
@@ -16,16 +31,7 @@ const CabList = () => {
       .catch((error) => {
         console.error(error);
       });
-  }, []);
-
-  const handleDelete = (registrationNumber) => {
-    // Perform the delete operation using the registrationNumber
-    // Update the cabDetails state after deletion
-    const updatedCabDetails = cabDetails.filter(
-      (cab) => cab.registrationNumber !== registrationNumber
-    );
-    setCabDetails(updatedCabDetails);
-  };
+  }, [handleDelete]);
 
   return (
     <Fragment>
@@ -37,10 +43,11 @@ const CabList = () => {
             <>
             <CabCard
               key={cab._id}
+              cab_id={cab._id}
               cab_registration_number={cab.cab_registration_number}
               cab_model={cab.cab_model}
               cab_colour={cab.cab_colour}
-              onDelete={() => handleDelete(cab.cab_registration_number)}
+              onDelete={() => handleDelete(cab._id)}
             />
             </>
           ))}

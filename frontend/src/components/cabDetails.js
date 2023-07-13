@@ -29,16 +29,19 @@ const CabDetails = () => {
           console.error(error);
         });
     }, []);
-  const handleEdit = (id, field, value) => {
-    const updatedCabDetails = cabDetails.map((cab) => {
-      if (cab._id === id) {
-        return { ...cab, [field]: value };
-      }
-      return cab;
-    });
 
-    setCabDetails(updatedCabDetails);
-  };
+
+  const handleDelete = (id) => {
+  axios
+    .delete(`http://localhost:5000/CabDetails/${id}`)
+    .then((response) => {
+      console.log("Cab entry deleted successfully");
+      // Handle any additional logic after deletion if needed
+    })
+    .catch((error) => {
+      console.error("Error deleting cab entry:", error);
+    });
+};
 
   const handleDelete = (id) => {
     const updatedCabDetails = cabDetails.filter((cab) => cab._id !== id);
