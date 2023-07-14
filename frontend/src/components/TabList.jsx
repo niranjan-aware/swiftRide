@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../css/TabList.css";
-import DriverList from "./DriverList";
-import CabList from "./CabList";
+import TabDriverList from "./TabDriverList";
+import TabCabList from "./TabCabList";
 
 const TabList = () => {
   const [activeTab, setActiveTab] = useState("drivers");
@@ -27,7 +27,7 @@ const TabList = () => {
         </button>
       </div>
       <div className="tab-content">
-        {activeTab === "drivers" ? <DriverList /> : <CabList />}
+        {activeTab === "drivers" ? <TabDriverList /> : <TabCabList />}
       </div>
     </div>
   );

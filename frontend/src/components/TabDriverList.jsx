@@ -6,7 +6,7 @@ import axios from 'axios';
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 
-const DriverList = () => {
+const TabDriverList = () => {
   const [drivers, setDrivers] = useState([]);
   const [error, setError] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -28,10 +28,6 @@ const DriverList = () => {
       .catch((error) => {
         console.error('Error deleting Driver entry:', error);
       });
-  };
-
-  const handleAddDriver = () => {
-    setIsModalOpen(true);
   };
 
   const handleCloseModal = () => {
@@ -79,7 +75,7 @@ const DriverList = () => {
       .catch((error) => {
         setError(error.message);
       });
-  }, [handleSaveDriver,handleDelete]);
+  }, []);
 
   if (error) {
     return <div>Error: {error}</div>;
@@ -90,9 +86,6 @@ const DriverList = () => {
       <NavigationBar />
       <div className="driver-list-container">
         <h1 className="list-heading">Driver List</h1>
-        <Button className="add-driver-button" onClick={handleAddDriver}>
-          Add Driver
-        </Button>
         <div className="cards-container">
           {drivers.map((driver) => (
             <DriverCard
@@ -172,4 +165,4 @@ const DriverList = () => {
   );
 };
 
-export default DriverList;
+export default TabDriverList;

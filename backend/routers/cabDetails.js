@@ -17,6 +17,7 @@ router.use(express.urlencoded());
 
 router.post('/CabProvider', async (req, res) => {
     const {cab_registration_number,cab_model,cab_colour} = req.body
+    console.log(cab_registration_number)
 
     try {
         const cabprovider = new cabProvider({cab_registration_number,cab_model,cab_colour})

@@ -33,3 +33,10 @@
 .card:first-child {
   margin-top: 0;
 }
+
+.add-cab-button {
+  position: fixed;
+  top: 100px;
+  left: 200px;
+  
+}

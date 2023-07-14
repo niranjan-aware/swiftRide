@@ -19,13 +19,25 @@
   font-weight: bold;
 }
 
+.add-driver-button {
+  position: fixed;
+  top: 90px;
+  left: 230px;
+  padding: 10px 15px;
+  background-color: #f50057;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+}
+
 .cards-container {
   display: grid;
   grid-template-columns: 1fr;
   gap: 20px;
   max-width: 800px;
   margin: 80px auto 0; /* Add top margin of 80px */
-  margin-top: 1200px;
 }
 
 .driver-card {
