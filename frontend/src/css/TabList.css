@@ -27,19 +27,21 @@
   
   .tab-button {
     padding: 10px 20px;
-    background-color: #f0f0f0;
+    background-color: #656165;
     border: none;
     border-radius: 8px;
+    margin-left: 23px;
+    color: black;
     font-size: 16px;
     cursor: pointer;
   }
   
   .tab-button.active {
-    background-color: #ddd;
+    background-color: #ffff00;
   }
   
   .tab-content {
-    border: 1px solid #ccc;
+   
     border-radius: 8px;
     padding: 20px;
   }

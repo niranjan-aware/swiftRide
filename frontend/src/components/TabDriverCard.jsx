@@ -38,7 +38,7 @@ const DriverCard = ({ id, driverId, name, idNumber, email, phoneNumber, onDelete
   return (
     <div className="driver-card">
       <div className="driver-details">
-        <h2 className="driver-name">{name}</h2>
+        <h2 className="driver-name">Name:{name}</h2>
         <p className="driver-id">ID Number: {idNumber}</p>
         <div className="driver-info">
           <p>Email: {email}</p>

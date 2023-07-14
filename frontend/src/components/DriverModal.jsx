@@ -35,7 +35,7 @@ const DriverModal = ({ isOpen, onClose, driverData, onSave }) => {
     <div className="modal-overlay">
       <div className="modal-content">
         <h2>Edit Driver Details</h2>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} style={{padding:"22px"}}>
           <div className="form-group">
             <label htmlFor="name">Name:</label>
             <input

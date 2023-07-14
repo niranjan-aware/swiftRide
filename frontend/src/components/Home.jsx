@@ -28,7 +28,6 @@ const Home = () => {
                   Welcome to{" "}
                   <span
                     className="highlight"
-                    style={{ fontFamily: "Azonix" }}
                   >
                     SWIFTRIDE
                   </span>

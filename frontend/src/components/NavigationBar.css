@@ -6,6 +6,10 @@
   width: 100%;
 }
 
+#SWIFTRIDE{
+  text-decoration: none;
+}
+
 .navbar-brand {
   display: flex;
   align-items: center;
@@ -47,14 +51,15 @@
   margin-left: 10px;
 }
 .login-button {
-  borderRadius: 20px;
   padding: 8px 20px;
-  fontSize: 1rem;
-  margin-left: 10px;
-  background-color: transparent;
-  border: none;
-  color: rgb(255, 252, 95);
-  transition: color 0.3s ease;
+ font-size: 1rem;
+ border-radius: 20px;
+ margin-left: 10px;
+ background-color: transparent;
+ border: none;
+ color: rgb(255, 252, 95);
+ transition: color 0.3s ease;
+ border: 2px solid yellow;
 }
 
 .login-button:hover {

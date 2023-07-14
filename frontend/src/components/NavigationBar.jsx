@@ -5,6 +5,7 @@ import Container from 'react-bootstrap/Container';
 import Button from 'react-bootstrap/Button';
 import './NavigationBar.css';
 import LoginModal from './Auth/Login'; // Import the LoginModal component
+import { Link } from 'react-router-dom';
 
 const NavigationBar = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -33,7 +34,9 @@ const NavigationBar = () => {
     <div>
       <Navbar bg="transparent" variant="dark" expand="lg" className="fixed-top navbar-full-width">
         <Container fluid>
-          <Navbar.Brand>
+        
+          <Navbar.Brand >
+        
             <img
               alt=""
               src={logo}
@@ -41,18 +44,23 @@ const NavigationBar = () => {
               height="70"
               className="d-inline-block align-top logo-image"
             />
-            <span className="brand-text">SWIFTRIDE</span>
+            <a id="SWIFTRIDE" href="/" >
+  <span class="brand-text">SWIFTRIDE</span>
+</a>
+            {/* <span className="brand-text">SWIFTRIDE</span> */}
+         
           </Navbar.Brand>
+    
           <Navbar.Toggle aria-controls="navbar-nav" />
           <Navbar.Collapse id="navbar-nav">
             <ul className="navbar-nav ml-auto">
-              <li className="nav-item">
+              <li className="nav-item" style={{marginRight:"2rem"}}>
                 {!isLoggedIn ? (
-                  <Button variant="light" className="login-button" onClick={handleLogin}>
+                  <Button variant="dark" className="login-button" onClick={handleLogin} >
                     Login
                   </Button>
                 ) : (
-                  <Button variant="light" className="login-button" onClick={handleLogout}>
+                  <Button variant="dark" className="login-button" onClick={handleLogout}>
                     Logout
                   </Button>
                 )}

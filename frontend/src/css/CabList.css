@@ -3,6 +3,7 @@
   overflow-y: auto;
   height: auto;
   padding-top: 0;
+  margin-left: 19rem;
 }
 
 .list-heading {
@@ -15,12 +16,14 @@
   margin: 0;
 }
 
-.cards-container {
-  display: flex;
-  flex-direction: column;
+.cards-container1 {
+  display: grid;
+  grid-template-columns: 1fr;
   gap: 20px;
   max-width: 800px;
-  margin: 0 auto;
+  margin-top:13rem;
+  
+
 }
 
 .card {
@@ -38,5 +41,4 @@
   position: fixed;
   top: 100px;
   left: 200px;
-  
 }

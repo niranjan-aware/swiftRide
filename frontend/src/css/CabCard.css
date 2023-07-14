@@ -1,13 +1,15 @@
 .cab-card {
   background-color: #fff;
-  border-radius: 8px;
-  padding: 20px;
-  margin-bottom: 20px;
+  border-radius: 2px;
+  padding: 5px;
+  margin-bottom: 5px;
   position: relative;
+  width: 800px;
 }
 
 .cab-details {
-  margin-bottom: 10px;
+  margin-bottom: 2px;
+  padding: 10px;
 }
 
 .cab-title {
@@ -19,6 +21,7 @@
   display: flex;
   justify-content: flex-end;
   margin-top: 10px;
+  padding: 10px;
 }
 
 .edit-button,
@@ -42,15 +45,19 @@
 
 .edit-button:hover svg,
 .delete-button:hover svg {
-  opacity: 0.7;
+ opacity:0.7;
 }
 
 .assigned-drivers-button {
   display: flex;
   justify-content: center;
   margin-top: 20px;
+  margin-bottom: 23px;
 }
 
+
+
+/*
 .assigned-drivers-button button {
   background-color: #17a2b8;
   color: #fff;
@@ -64,4 +71,23 @@
 
 .assigned-drivers-button button:hover {
   background-color: #11707f;
+} */
+.assigned-drivers-button {
+  display: flex;
+  justify-content: center;
+  margin-top: 9px;
+  margin-bottom: 13px;
 }
+
+.assigned-drivers-button button {
+  background-color: yellow; /* Set the background color */
+  color: black; /* Set the text color */
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s; /* Add a transition effect */
+}
+
+  .assigned-drivers-button button:hover {
+    background-color: rgb(238, 238, 152); /* Change the background color on hover */
+  }

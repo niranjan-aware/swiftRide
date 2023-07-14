@@ -83,10 +83,10 @@
           <NavigationBar />
           <div className="cab-list">
             <h2 className="list-heading">Cab List</h2>
-            <Button className="add-cab-button" onClick={handleAddCab}>
+            <Button className="add-cab-button" variant="outline-warning"  onClick={handleAddCab}>
               Add Cab
             </Button>
-            <div className="cards-container">
+            <div className="cards-container1">
               {cabDetails.map((cab) => (
                 <CabCard
                   key={cab._id}

@@ -1,35 +1,23 @@
 .driver-list-container {
   position: relative;
   padding: 20px;
-  margin-top: 100px;
+  /* margin-top: 100px; */
   overflow: auto;
   height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: transparent;
+  /* margin-right: 0px; */
 }
 
 .list-heading {
   position: fixed;
   top: 100px;
-  left: 100px;
+  left: 43rem;
   color: white;
-  font-size: 24px;
+  font-size: 35px;
   font-weight: bold;
-}
-
-.add-driver-button {
-  position: fixed;
-  top: 90px;
-  left: 230px;
-  padding: 10px 15px;
-  background-color: #f50057;
-  color: white;
-  font-size: 16px;
-  font-weight: bold;
-  text-decoration: none;
-  border-radius: 8px;
 }
 
 .cards-container {
@@ -37,33 +25,13 @@
   grid-template-columns: 1fr;
   gap: 20px;
   max-width: 800px;
-  margin: 80px auto 0; /* Add top margin of 80px */
-}
+  margin-top:13rem;
+  
 
-.driver-card {
-  background-color: #fff;
-  border-radius: 8px;
-  padding: 20px;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 }
-
-.driver-details {
-  margin-bottom: 10px;
-}
-
-.driver-name {
-  font-size: 18px;
-  margin-bottom: 5px;
-}
-
-.driver-id {
-  font-size: 14px;
-  color: #666;
-}
-
-.driver-info p {
-  margin-bottom: 5px;
+.add-driver-button {
+  position: fixed;
+  top: 100px;
+  left: 200px;
+ 
 }
