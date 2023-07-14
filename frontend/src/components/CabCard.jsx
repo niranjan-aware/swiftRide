@@ -4,7 +4,7 @@ import '../css/CabCard.css';
 import CabModal from './CabModal';
 import AssignedDriverModal from './AssignedDriverModal';
 
-const CabCard = ({ cab_id, cab_registration_number, cab_model, cab_colour, onDelete }) => {
+const CabCard = ({ id,cab_id, cab_registration_number, cab_model, cab_colour, onDelete }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isAssignedDriversModalOpen, setIsAssignedDriversModalOpen] = useState(false);
 
@@ -67,7 +67,7 @@ const CabCard = ({ cab_id, cab_registration_number, cab_model, cab_colour, onDel
         onEdit={handleSaveModal}
       />
       <AssignedDriverModal
-        cab_id={cab_id}
+        cab_id={id}
         isOpen={isAssignedDriversModalOpen}
         onClose={handleCloseAssignedDriversModal}
       />

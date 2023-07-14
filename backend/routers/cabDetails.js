@@ -2,7 +2,7 @@ const express = require('express')
 const router = new express.Router()
 var bodyParser = require('body-parser')
 const cabProvider = require('../models/cabDetailsSchema')
-
+const mongoose = require('mongoose');
 router.use(express.json());
 router.use(express.urlencoded());
 
@@ -88,6 +88,41 @@ router.put('/CabDetails/:id', async (req, res) => {
     res.status(500).json({ message: 'Server error' });
   }
 });
-  
+
+
+
+
+router.put('/AssignedDrivers/:id', async (req, res) => {
+  let cabId = req.params.id.trim();
+  const { assigned_driver } = req.body;
+
+  try {
+    // Find the driver entry by ID
+    const cab = await cabProvider.findById(cabId);
+
+    if (!cab) {
+      return res.status(404).json({ message: 'Cab not found' });
+    }
+
+    // Check if assigned_driver already exists in the assigned_drivers array
+    const isAlreadyAssigned = cab.assigned_drivers.includes(assigned_driver);
+
+    if (isAlreadyAssigned) {
+      return res.status(400).json({ message: 'Driver already assigned to the cab' });
+    }
+
+    // Push the assigned_driver to the assigned_drivers array
+    cab.assigned_drivers.push(new mongoose.Types.ObjectId(assigned_driver));
+
+    // Save the updated cab document
+    const updatedCab = await cab.save();
+
+    res.status(200).json(updatedCab);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: 'Server error' });
+  }
+});
+
 
 module.exports = router

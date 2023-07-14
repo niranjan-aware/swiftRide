@@ -43,6 +43,7 @@ const CabList = () => {
             <>
             <CabCard
               key={cab._id}
+              id={cab._id}
               cab_id={cab._id}
               cab_registration_number={cab.cab_registration_number}
               cab_model={cab.cab_model}

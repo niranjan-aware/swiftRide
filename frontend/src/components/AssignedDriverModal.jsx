@@ -4,7 +4,7 @@ import Button from 'react-bootstrap/Button';
 import axios from 'axios';
 import '../css/AssignedDriverModal.css';
 
-const AssignedDriversModal = ({ isOpen, onClose }) => {
+const AssignedDriversModal = ({cab_id, isOpen, onClose }) => {
   const [driverList, setDriverList] = useState([]);
   const [error, setError] = useState(null);
 
@@ -23,10 +23,13 @@ const AssignedDriversModal = ({ isOpen, onClose }) => {
 
   const handleAddItem = async (itemId) => {
     try {
-      // Add your logic to assign the driver here
-      console.log('Added item:', itemId);
+      const response = await axios.put(`http://localhost:5000/AssignedDrivers/${cab_id}`, {
+        assigned_cab: itemId
+      });
+      console.log('Added item:', response.data);
     } catch (error) {
-      console.error('Error adding item:', error);
+        window.alert('Error adding item:user is Already added');  
+        console.error('Error adding item:', error);
     }
   };
 

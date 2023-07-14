@@ -13,7 +13,7 @@ const cabDetailsSchema = new Schema({
     type:String
   },
   assigned_drivers:{
-    type:[Number]
+    type:[String]
   }
 });
 
