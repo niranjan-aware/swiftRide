@@ -4,9 +4,9 @@
     align-items: center;
     justify-content: center;
     height: 100vh;
-  }
-  
-  .register-driver-overlay {
+}
+
+.register-driver-overlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -14,48 +14,48 @@
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 1;
-  }
-  
-  .register-driver-container {
+}
+
+.register-driver-container {
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100%;
-  }
-  
-  .register-driver-card {
+}
+
+.register-driver-card {
     width: 400px;
     max-width: 90%;
     position: absolute;
-  }
-  
-  .register-driver-header {
+}
+
+.register-driver-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     background-color: #f8f9fa;
     padding: 10px;
-  }
-  
-  .register-driver-close-button {
+}
+
+.register-driver-close-button {
     border: none;
     background-color: transparent;
     color: #212529;
     font-size: 1.2rem;
     padding: 0;
-  }
-  
-  .register-driver-form {
+}
+
+.register-driver-form {
     margin: 20px 0;
-  }
-  
-  .register-driver-form input {
-    pointer-events: auto; /* Enable interaction with the form fields */
-  }
-  
-  .register-driver-signup-link {
+}
+
+.register-driver-form input {
+    pointer-events: auto;
+    /* Enable interaction with the form fields */
+}
+
+.register-driver-signup-link {
     text-align: center;
     margin-top: 20px;
-  }
-  
+}

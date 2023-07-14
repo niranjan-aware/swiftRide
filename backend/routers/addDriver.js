@@ -88,6 +88,43 @@ router.delete('/DriverDetails/:id', async (req, res) => {
       res.status(500).json({ message: 'Server error' });
     }
   });
+
+
+
+router.put('/AssignedCabs/:id', async (req, res) => {
+  const driverId = req.params.id;
+  const { assigned_cabs } = req.body;
+
+  try {
+    // Find the driver entry by ID
+    const driver = await Driver.findById(driverId);
+
+    if (!driver) {
+      return res.status(404).json({ message: 'Driver not found' });
+    }
+
+    // Check if assigned_cab already exists in the assigned_cabs array
+    const isAlreadyAssigned = driver.assigned_cab.includes(assigned_cabs);
+
+    if (isAlreadyAssigned) {
+      return res.status(400).json({ message: 'Cab already assigned to the driver' });
+    }
+
+    // Push the assigned_cab to the assigned_cabs array
+    driver.assigned_cab.push(assigned_cabs);
+
+    // Save the updated driver document
+    const updatedDriver = await driver.save();
+
+    res.status(200).json(updatedDriver);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: 'Server error' });
+  }
+});
+
+  
+  
   
 
 module.exports = router

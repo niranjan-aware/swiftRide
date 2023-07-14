@@ -2,9 +2,11 @@ import React, { useState } from 'react';
 import { FaEdit, FaTrash } from 'react-icons/fa';
 import '../css/CabCard.css';
 import CabModal from './CabModal';
+import AssignedDriverModal from './AssignedDriverModal';
 
-const CabCard = ({ cab_id,cab_registration_number, cab_model, cab_colour, onDelete }) => {
+const CabCard = ({ cab_id, cab_registration_number, cab_model, cab_colour, onDelete }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isAssignedDriversModalOpen, setIsAssignedDriversModalOpen] = useState(false);
 
   const handleDelete = () => {
     // Call the API or perform the delete operation here
@@ -25,6 +27,14 @@ const CabCard = ({ cab_id,cab_registration_number, cab_model, cab_colour, onDele
     setIsModalOpen(false);
   };
 
+  const handleAssignedDrivers = () => {
+    setIsAssignedDriversModalOpen(true);
+  };
+
+  const handleCloseAssignedDriversModal = () => {
+    setIsAssignedDriversModalOpen(false);
+  };
+
   return (
     <div className="cab-card">
       <div className="cab-details">
@@ -40,6 +50,11 @@ const CabCard = ({ cab_id,cab_registration_number, cab_model, cab_colour, onDele
           <FaTrash />
         </button>
       </div>
+      <div className="assigned-drivers-button">
+        <button className="assigned-drivers-button" onClick={handleAssignedDrivers}>
+          Assigned Drivers
+        </button>
+      </div>
       <CabModal
         isOpen={isModalOpen}
         onClose={handleCloseModal}
@@ -50,6 +65,11 @@ const CabCard = ({ cab_id,cab_registration_number, cab_model, cab_colour, onDele
           cab_colour,
         }}
         onEdit={handleSaveModal}
+      />
+      <AssignedDriverModal
+        cab_id={cab_id}
+        isOpen={isAssignedDriversModalOpen}
+        onClose={handleCloseAssignedDriversModal}
       />
     </div>
   );

@@ -44,3 +44,24 @@
 .delete-button:hover svg {
   opacity: 0.7;
 }
+
+.assigned-drivers-button {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.assigned-drivers-button button {
+  background-color: #17a2b8;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.assigned-drivers-button button:hover {
+  background-color: #11707f;
+}

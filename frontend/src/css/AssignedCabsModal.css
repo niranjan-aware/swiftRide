@@ -1,0 +1,40 @@
+.assigned-cabs-modal .modal-dialog {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 800px; /* Adjust the width as per your requirement */
+    margin-top: 100px;
+  }
+  
+  .assigned-cabs-modal .modal-content {
+    width: 100%;
+  }
+  
+  .assigned-cabs-modal .modal-body {
+    padding: 20px;
+  }
+  
+  .assigned-cabs-modal ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .assigned-cabs-modal li {
+    
+    margin-bottom: 20px;
+  }
+  
+  .assigned-cabs-modal li p {
+    margin: 0;
+  }
+  
+  .assigned-cabs-modal li .item-details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .assigned-cabs-modal li .item-actions button {
+    margin-left: 10px;
+  }
+  

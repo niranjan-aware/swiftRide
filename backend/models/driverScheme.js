@@ -16,7 +16,8 @@ const driverSchema = new Schema({
     type:Number
   },
   assigned_cab:{
-    type:[Number]
+    unique:true,
+    type:[String]
   }
 
 });

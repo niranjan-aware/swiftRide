@@ -1,0 +1,39 @@
+.assigned-drivers-modal .modal-dialog {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 800px; /* Adjust the width as per your requirement */
+    margin-top: 100px;
+  }
+  
+  .assigned-drivers-modal .modal-content {
+    width: 100%;
+  }
+  
+  .assigned-drivers-modal .modal-body {
+    padding: 20px;
+  }
+  
+  .assigned-drivers-modal ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .assigned-drivers-modal li {
+    margin-bottom: 20px;
+  }
+  
+  .assigned-drivers-modal li p {
+    margin: 0;
+  }
+  
+  .assigned-drivers-modal li .item-details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .assigned-drivers-modal li .item-actions button {
+    margin-left: 10px;
+  }
+  
