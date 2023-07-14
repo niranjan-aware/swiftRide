@@ -1,5 +1,5 @@
 import React, { Fragment, useEffect, useState } from 'react';
-import DriverCard from './DriverCard';
+import TabDriverCard from './TabDriverCard';
 import NavigationBar from './NavigationBar';
 import '../css/DriverList.css';
 import axios from 'axios';
@@ -88,7 +88,7 @@ const TabDriverList = () => {
         <h1 className="list-heading">Driver List</h1>
         <div className="cards-container">
           {drivers.map((driver) => (
-            <DriverCard
+            <TabDriverCard
               key={driver._id}
               id={driver._id}
               name={driver.name}

@@ -54,9 +54,9 @@ const DriverCard = ({ id, driverId, name, idNumber, email, phoneNumber, onDelete
         </button>
       </div>
       <div className="driver-assigned-cabs">
-        {/* <button className="assigned-cabs-button" onClick={handleAssignedCabs}>
+        <button className="assigned-cabs-button" onClick={handleAssignedCabs}>
           Assigned Cabs
-        </button> */}
+        </button>
       </div>
       <DriverModal
         isOpen={isModalOpen}

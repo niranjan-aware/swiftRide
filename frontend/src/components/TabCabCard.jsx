@@ -51,6 +51,9 @@ const CabCard = ({ id,cab_id, cab_registration_number, cab_model, cab_colour, on
         </button>
       </div>
       <div className="assigned-drivers-button">
+        <button className="assigned-drivers-button" onClick={handleAssignedDrivers}>
+          Assigned Drivers
+        </button>
       </div>
       <CabModal
         isOpen={isModalOpen}

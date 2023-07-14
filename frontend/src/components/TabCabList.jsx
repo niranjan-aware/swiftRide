@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import CabCard from './CabCard';
+import TabCabCard from './TabCabCard';
 import '../css/CabList.css';
 import NavigationBar from './NavigationBar';
 import axios from 'axios';
@@ -81,7 +81,7 @@ const TabCabList = () => {
         <h2 className="list-heading">Cab List</h2>
         <div className="cards-container">
           {cabDetails.map((cab) => (
-            <CabCard
+            <TabCabCard
               key={cab._id}
               id={cab._id}
               cab_id={cab._id}
