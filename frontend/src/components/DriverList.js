@@ -1,20 +1,20 @@
-import React, { Fragment, useEffect, useState } from 'react';
-import DriverCard from './DriverCard';
-import NavigationBar from './NavigationBar';
-import '../css/DriverList.css';
-import axios from 'axios';
-import Modal from 'react-bootstrap/Modal';
-import Button from 'react-bootstrap/Button';
+import React, { Fragment, useEffect, useState } from "react";
+import DriverCard from "./DriverCard";
+import NavigationBar from "./NavigationBar";
+import "../css/DriverList.css";
+import axios from "axios";
+import Modal from "react-bootstrap/Modal";
+import Button from "react-bootstrap/Button";
 
 const DriverList = () => {
   const [drivers, setDrivers] = useState([]);
   const [error, setError] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [newDriverData, setNewDriverData] = useState({
-    name: '',
-    driver_id: '',
-    email: '',
-    phone_number: '',
+    name: "",
+    driver_id: "",
+    email: "",
+    phone_number: "",
   });
 
   const handleDelete = (id) => {
@@ -22,11 +22,11 @@ const DriverList = () => {
     axios
       .delete(`http://localhost:5000/DriverDetails/${id}`)
       .then((response) => {
-        console.log('Driver entry deleted successfully');
+        console.log("Driver entry deleted successfully");
         // Handle any additional logic after deletion if needed
       })
       .catch((error) => {
-        console.error('Error deleting Driver entry:', error);
+        console.error("Error deleting Driver entry:", error);
       });
   };
 
@@ -37,28 +37,28 @@ const DriverList = () => {
   const handleCloseModal = () => {
     setIsModalOpen(false);
     setNewDriverData({
-      name: '',
-      driver_id: '',
-      email: '',
-      phone_number: '',
+      name: "",
+      driver_id: "",
+      email: "",
+      phone_number: "",
     });
   };
 
   const handleSaveDriver = () => {
     axios
-      .post('http://localhost:5000/addDriver', newDriverData)
+      .post("http://localhost:5000/addDriver", newDriverData)
       .then((response) => {
-        console.log('New driver entry saved successfully:', response.data);
+        console.log("New driver entry saved successfully:", response.data);
         setIsModalOpen(false);
         setNewDriverData({
-          name: '',
-          driver_id: '',
-          email: '',
-          phone_number: '',
+          name: "",
+          driver_id: "",
+          email: "",
+          phone_number: "",
         });
       })
       .catch((error) => {
-        console.error('Error saving new driver entry:', error);
+        console.error("Error saving new driver entry:", error);
       });
   };
 
@@ -72,14 +72,14 @@ const DriverList = () => {
 
   useEffect(() => {
     axios
-      .get('http://localhost:5000/DriverDetails')
+      .get("http://localhost:5000/DriverDetails")
       .then((response) => {
         setDrivers(response.data);
       })
       .catch((error) => {
         setError(error.message);
       });
-  }, [handleSaveDriver,handleDelete]);
+  }, [handleSaveDriver, handleDelete]);
 
   if (error) {
     return <div>Error: {error}</div>;
@@ -90,7 +90,11 @@ const DriverList = () => {
       <NavigationBar />
       <div className="driver-list-container">
         <h1 className="list-heading">Driver List</h1>
-        <Button className="add-driver-button" variant="outline-warning" onClick={handleAddDriver}>
+        <Button
+          className="add-driver-button"
+          variant="outline-warning"
+          onClick={handleAddDriver}
+        >
           Add Driver
         </Button>
         <div className="cards-container">
