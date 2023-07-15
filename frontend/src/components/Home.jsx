@@ -44,7 +44,7 @@ const Home = () => {
                   Cab Enrollment
                   </Link>
                   <Link to="/TabList" className="btn btn-outline-warning">
-                    Register as User
+                    Cab-Driver Assignment
                   </Link>
                 </div>
               </div>

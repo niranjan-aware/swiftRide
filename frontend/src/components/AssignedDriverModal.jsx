@@ -26,6 +26,7 @@ const AssignedDriversModal = ({cab_id, isOpen, onClose }) => {
       const response = await axios.put(`http://localhost:5000/AssignedDrivers/${cab_id}`, {
         assigned_cab: itemId
       });
+      window.alert('User Added Succefully !')
       console.log('Added item:', response.data);
     } catch (error) {
         window.alert('Error adding item:user is Already added');  
