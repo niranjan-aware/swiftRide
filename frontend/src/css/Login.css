@@ -1,0 +1,27 @@
+.modal-dialog {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 500px; /* Adjust the top margin as needed */
+  }
+  
+  
+  
+  
+  .modal-content {
+    width: 400px;
+    margin: auto;
+  }
+  
+  .modal-body {
+    padding: 20px;
+  }
+  
+  .modal-title {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  

@@ -57,7 +57,7 @@ const NavigationBar = () => {
               <li className="nav-item" style={{marginRight:"2rem"}}>
                 {!isLoggedIn ? (
                   <Button variant="dark" className="login-button" onClick={handleLogin} >
-                    Login
+                    <a href="/">Logout</a>
                   </Button>
                 ) : (
                   <Button variant="dark" className="login-button" onClick={handleLogout}>
@@ -70,13 +70,7 @@ const NavigationBar = () => {
         </Container>
       </Navbar>
 
-      {isLoginModalOpen && (
-        <LoginModal
-          isOpen={isLoginModalOpen}
-          onClose={handleLoginModalClose}
-          onSubmit={handleLoginModalSubmit}
-        />
-      )}
+     
     </div>
   );
 };

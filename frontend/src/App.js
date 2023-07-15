@@ -30,7 +30,7 @@ function App() {
             element={<TabList/>}
             exact
           />
-          <Route path="/login" element={<Login />} exact />
+          {/* <Route path="/login" element={<Login />} exact /> */}
         </Routes>
       </BrowserRouter>
     </Fragment>
